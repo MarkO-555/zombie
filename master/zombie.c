@@ -18,8 +18,8 @@
 #include <sys/time.h>
 #include <time.h>
 #include <errno.h>
-#include <readline.h>
-#include <history.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 #include "bounce.h"
 
 #define WS      " \n\t"

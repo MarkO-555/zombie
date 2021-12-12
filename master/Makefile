@@ -17,4 +17,4 @@ cdig: cdig.c
 	gcc -o cdig cdig.c
 
 clean:
-	rm -f *~ zombie bounce bounce.h ns cdig
+	rm -f *~ zombie bounce bounce09 bounce.h ns cdig

@@ -18,6 +18,9 @@ code (in MC6809 assembler)
 * make     - builds everything.
 * gcc      - Gnu's Compiler
 * toolshed - (decb,makewav command) Color Computer toolkit
+* readline - The GNU Readline Library
+**     'sudo apt-get install libreadline-dev' or
+**         'yum install readline-devel' 
 
 ### To build ###
 ```
