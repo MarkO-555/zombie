@@ -1,9 +1,6 @@
 	include "zombie.def"
 
 	export	start
-	export  insize
-	export  inmax
-	export  inbuf
 	export  put_char
 	export	CPS
 
@@ -20,10 +17,6 @@ prog_start equ *
 prog_end equ *
 
 	.area	.data
-insize	rmb	2		; size of packet in input buffer
-inbuf	rmb	2		; pointer to input buffer
-inmax	.dw	576+14+5	; max size of input buffer
-
 
 stack	rmb	64		; a private stack
 stacke
@@ -73,6 +66,8 @@ mdns_m	fcn	"STARTING MDNS"
 start	orcc	#$50		; turn off interrupts
 	ldx	#hello_m
 	lbsr	puts
+	ldd	#576+14+5	; max size of input buffer
+	std	inmax,pcr
 	ldd	#0
 	std	time,pcr
 	std	atime,pcr
